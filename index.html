@@ -8,7 +8,10 @@
   <link rel="stylesheet" href="assets/css/main.css">
   <script type="text/javascript" src="assets/js/lib/paper-full.js"></script>
   <script type="text/paperscript" canvas="myCanvas">
-    var circle = new Path.Circle(new Point(200,140), 100); circle2.fillColor = "magenta"
+    for(var x = 0; x < 1000; x+= 100) {
+      var circle = new Path.Circle(new Point(x,0), 10);
+      circle.fillColor = "magenta"
+    }
   </script>
 </head>
 
