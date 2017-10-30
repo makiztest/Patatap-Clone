@@ -8,11 +8,9 @@
   <link rel="stylesheet" href="assets/css/main.css">
   <script type="text/javascript" src="assets/js/lib/paper-full.js"></script>
   <script type="text/paperscript" canvas="myCanvas">
-    for(var x = 0; x < 1000; x+= 100) {
-      for(var y = 0; y < 1000; y+= 100) {
-        var circle = new Path.Circle(new Point(x,y), 10);
-        circle.fillColor = "magenta"
-      }
+    function onKeyDown(event) { 
+      var circle = new Path.Circle(new Point(100,100), 10);
+      circle.fillColor = "tomato" 
     }
   </script>
 </head>
