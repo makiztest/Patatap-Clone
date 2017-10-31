@@ -8,9 +8,10 @@
   <link rel="stylesheet" href="assets/css/main.css">
   <script type="text/javascript" src="assets/js/lib/paper-full.js"></script>
   <script type="text/paperscript" canvas="myCanvas">
-    function onKeyDown(event) { 
-      var circle = new Path.Circle(new Point(100,100), 10);
-      circle.fillColor = "tomato" 
+    function onKeyDown(event) {
+      var maxPoint = new Point(view.size.width, view.size.height);
+      new Path.Circle((maxPoint), 10).fillColor = "tomato"
+      console.log(maxPoint)
     }
   </script>
 </head>
