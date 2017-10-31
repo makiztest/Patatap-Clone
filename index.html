@@ -5,12 +5,31 @@
   <title>Circles</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="assets/css/main.css">
   <script type="text/javascript" src="assets/js/lib/paper-full.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.5/howler.min.js"></script>  
+  <link rel="stylesheet" href="assets/css/main.css">
   <script type="text/paperscript" canvas="myCanvas">
+
+    var sound1 = new Howl({
+      src: ['assets/sounds/bubbles.mp3']
+    });
+
+    var sound2 = new Howl({
+      src: ['assets/sounds/confetti.mp3']
+    });
+
     var circles = [];
 
     function onKeyDown(event) {
+      <!-- sound1.play(); -->
+      if(event.key === "a") {
+        sound1.play();
+      }
+
+      if(event.key === "s") {
+        sound2.play();
+      }
+
       var maxPoint = new Point(view.size.width, view.size.height);
       var randomPoint = Point.random();
       var point = maxPoint * randomPoint;
