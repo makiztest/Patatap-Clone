@@ -21,20 +21,19 @@
     var circles = [];
 
     function onKeyDown(event) {
-      <!-- sound1.play(); -->
-      if(event.key === "a") {
-        sound1.play();
-      }
-
-      if(event.key === "s") {
-        sound2.play();
-      }
-
       var maxPoint = new Point(view.size.width, view.size.height);
       var randomPoint = Point.random();
       var point = maxPoint * randomPoint;
       var newCircle = new Path.Circle(point, 300);
       newCircle.fillColor = "orange"
+      if(event.key === "a") {
+        sound1.play();
+        newCircle.fillColor = "magenta"
+      }
+      if(event.key === "s") {
+        sound2.play();
+        newCircle.fillColor = "blue"
+      }
       circles.push(newCircle);
     }
 
