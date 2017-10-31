@@ -14,15 +14,15 @@
       var maxPoint = new Point(view.size.width, view.size.height);
       var randomPoint = Point.random();
       var point = maxPoint * randomPoint;
-      var newCircle = new Path.Circle(point, 10);
+      var newCircle = new Path.Circle(point, 300);
       newCircle.fillColor = "orange"
       circles.push(newCircle);
     }
 
     function onFrame(event) {
       for(var i = 0; i < circles.length; i++) {
-        animatedColor.fillColor.hue += 1;
-        animatedColor.scale(.9)
+        circles[i].fillColor.hue += 1;
+        circles[i].scale(.9)
       }
     }
   </script>
