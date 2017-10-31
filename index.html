@@ -15,6 +15,13 @@
       console.log(point)
       new Path.Circle(point, 10).fillColor = "tomato"
     }
+
+    var animatedColor = new Path.Circle(200, 200, 100);
+    animatedColor.fillColor = "red";
+
+    function onFrame(event) {
+    animatedColor.fillColor.hue += 1;
+    }
   </script>
 </head>
 
